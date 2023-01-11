@@ -1,14 +1,10 @@
-let product;
-let price;
-let quantity;
+const age = 18;
+const message = "You are an adult";
+const messages = "You are a minor";
 
-product = "телефон"
-price = 5000;
-quantity = 10;
-
-const cost = price * quantity;
-
-const message = "Ви обрали " +  product + ", ціна за товар " + price + " гривень, " + "кількість товару " + quantity + ", вартість покупки " + cost + " гривень.";
-
-console.log('message :>> ', message);
-
+if (age >= 18) {
+    console.log('message :>> ', message);    
+}
+else {
+    console.log('messages :>> ', messages);
+}
