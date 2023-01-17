@@ -1,25 +1,15 @@
-// first exercise
+const fruits = ["Banana", "Apple", "Coconut", "Orange", "Pineapple"];
 
-const age = 18;
-const message = "You are an adult";
-const messages = "You are a minor";
+const banana = "Coconut";
+const coconut = "Orange";
+const orange = "Banana";
 
-if (age >= 18) {
-    console.log('message :>> ', message);    
-}
-else {
-    console.log('messages :>> ', messages);
-}
+fruits[0] = banana;
+fruits[2] = coconut;
+fruits[3] = orange;
 
-// second exercise 
+const users = ["Artem", "Vanya", "Petya"];
 
-const messageses = age >= 18 ? "You are an adult" : "You are a minor";
-console.log('messageses :>> ', messageses);
+const userIndex = users.length - 1;
 
-// third exercise
-
-let counter = 0;
-
-for (counter; counter <= 13; counter += 1) {
-   console.log("counter :>> ", counter);
-}
+console.log('fruits :>> ', fruits);
