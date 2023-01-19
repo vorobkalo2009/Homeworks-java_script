@@ -1,15 +1,14 @@
 const fruits = ["Banana", "Apple", "Coconut", "Orange", "Pineapple"];
 
-const banana = "Coconut";
-const coconut = "Orange";
-const orange = "Banana";
+fruits.pop();
+fruits.push("Banana");
+fruits.shift();
+fruits.unshift("Pineapple");
+fruits.splise(2, 1, "Avokado", "Greupfruit", "Kivi");
+console.log('fruits :>> ', fruits);
 
-fruits[0] = banana;
-fruits[2] = coconut;
-fruits[3] = orange;
+const message = ["I", "love",  "JS"];
+console.log('message :>> ', message.join(" "));
 
-const users = ["Artem", "Vanya", "Petya"];
-
-const userIndex = users.length - 1;
 
 console.log('fruits :>> ', fruits);
