@@ -1,14 +1,7 @@
-const fruits = ["Banana", "Apple", "Coconut", "Orange", "Pineapple"];
+// first
 
-fruits.pop();
-fruits.push("Banana");
-fruits.shift();
-fruits.unshift("Pineapple");
-fruits.splise(2, 1, "Avokado", "Greupfruit", "Kivi");
-console.log('fruits :>> ', fruits);
+function splitMessage(message,delimetr) {
+    console.log('message :>> ', message.split(delimetr));
+}
 
-const message = ["I", "love",  "JS"];
-console.log('message :>> ', message.join(" "));
-
-
-console.log('fruits :>> ', fruits);
+const arr = splitMessage("Js is cool", " ")
