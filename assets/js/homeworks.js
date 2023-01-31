@@ -1,28 +1,30 @@
+//first
+
+const people = {
+    height: 165,
+    weight: 43,
+    games: "minecraft",
+    form: 8,
+    sport: "badminton",
+}
+
+console.log('people :>> ', people);
+ 
+// second
+
+function FromKilometresToMiles() {
+    console.log('miles :>> ', kilometres*0.6214);
+}
+
+kilometres = 20;
+miles = FromKilometresToMiles();
+
+// third
+
 function spliceArray(array) {
-    const start = array.indexOf("JavaScript");
-    const arr = array.splice(start, 3);
-    return arr;
-  }
-  
-  const secondPart = spliceArray(["I", "study", "JavaScript", "right", "now"]);
-  
-  function sliceArray(array) {
-    const arr = array.slice(0, 2);
-    return arr;
-  }
-  
-  const firstPart = sliceArray(["I", "study", "JavaScript", "right", "now"]);
-  
-  console.log(firstPart);
-  
-  function сoncatArr(array1, array2) {
-    const arr = array1.concat(array2);
-  
-    const a = arr.join(" ");
-    return a;
-  }
-  
-  const message = сoncatArr(firstPart, secondPart);
-  
-  console.log("message :>> ", message);
-  
+    const start = array.indexOF("Orange");
+    const arres = array.splice(start, "grapefruit");
+    return arres;
+}
+
+array = spliceArray(["Apple","Orange","Plum"]);
