@@ -1,8 +1,10 @@
-function makeStringFromArray(array, delimetr) {
-    console.log('array :>> ', array.toString());
-}
-
-const string = makeStringFromArray("Js", "is", "cool");
+function makeStringFromArray(array, delimiter) {
+  const string = array.join(delimiter);
+  return string; 
+ }
+    
+const string = makeStringFromArray(["js", "is", "cool"], " ");
+console.log("string :>> ", string);
 
 function checkFruit(fruit) {
     if (fruit.includes("Apples")) {

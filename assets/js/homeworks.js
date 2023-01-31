@@ -1,6 +1,4 @@
-// first
-
-function splitMessage(message,delimetr) {
+function splitMessage(message, delimetr) {
     console.log('message :>> ', message.split(delimetr));
 }
 
