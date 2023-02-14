@@ -22,9 +22,9 @@ miles = FromKilometresToMiles();
 // third
 
 function spliceArray(array) {
-    const start = array.indexOF("Orange");
-    const arres = array.splice(start, "grapefruit");
-    return arres;
+    const start = array.indexOf("Orange");
+    const arres = array.splice(start, 1, "Grapefruit");
+    console.log('array :>> ', array);
 }
 
 array = spliceArray(["Apple","Orange","Plum"]);
