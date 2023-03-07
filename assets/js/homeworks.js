@@ -1,90 +1,73 @@
-// 1) Створи функцію sortByBalance(users)
-// так, щоб вона повертала масив користувачів відсортований за зростанням їх балансу (властивість balance)
-// за допомогою ланцюжка методів вивести імена юзерів відсортованих за зростанням їх балансу (sort,map)
+//1) створити в Html розмітці пустий список та додати у цей список продукти з масиву "ingredients"
+// (створювати лішки за допомогою методу createElement("li"))
+// до кожної лішки застосувати класс item(потрібно створити у css)  за допомогою JS
+// Додати кожній лішці текстовий контент у вигляді одного з продуктів
+//  та додати ці лішки до списку використовуючи синтаксис (...) додавати щось до дом дерева можна тільки один раз.
 
-const users = [
+const list = document.querySelector("#list");
+const list1 = document.querySelector("#list1");
+const imgs = document.querySelector("#imgs");
+
+const ingredients = [
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
+];
+
+const ingredientsList = ingredients.map((item) => {
+  const ingrEl = document.createElement("li");
+  ingrEl.classList.add("item");
+  ingrEl.textContent = `${item}`;
+  return ingrEl;
+});
+
+console.log(ingredientsList);
+
+list.append(...ingredientsList);
+
+//2) створити список в HTML розмітці та за допомогою JS коду додати у цей список справи на тиждень
+// використовуючи  синтаксис похилих крапок та insertAdjacentHTML
+//  додати стилі на ваш розсуд (класи можна одразу додавати коли створюєте розмітку li)
+
+const events = ["click", "input", "submit", "keyup", "keydown"];
+
+const markup = events
+  .map((item) => {
+    return `<li class="item2"> ${item}</li>`;
+  })
+  .join(" ");
+
+list1.insertAdjacentHTML("beforeend", markup);
+
+//3) вивести масив данних на екран будь-яким зручним способом
+// додати стилі
+
+const images = [
   {
-    name: "Moore Hensley",
-    email: "moorehensley@indexia.com",
-    eyeColor: "blue",
-    friends: ["Sharron Pace"],
-    isActive: false,
-    balance: 2811,
-    gender: "male",
+    url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
   },
   {
-    name: "Sharlene Bush",
-    email: "sharlenebush@tubesys.com",
-    eyeColor: "blue",
-    friends: ["Briana Decker", "Sharron Pace"],
-    isActive: true,
-    balance: 3821,
-    gender: "female",
+    url: "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
   },
   {
-    name: "Ross Vazquez",
-    email: "rossvazquez@xinware.com",
-    eyeColor: "green",
-    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-    isActive: false,
-    balance: 3793,
-    gender: "male",
-  },
-  {
-    name: "Elma Head",
-    email: "elmahead@omatom.com",
-    eyeColor: "green",
-    friends: ["Goldie Gentry", "Aisha Tran"],
-    isActive: true,
-    balance: 2278,
-    gender: "female",
-  },
-  {
-    name: "Carey Barr",
-    email: "careybarr@nurali.com",
-    eyeColor: "blue",
-    friends: ["Jordan Sampson", "Eddie Strong"],
-    isActive: true,
-    balance: 3951,
-    gender: "male",
-  },
-  {
-    name: "Blackburn Dotson",
-    email: "blackburndotson@furnigeer.com",
-    eyeColor: "brown",
-    friends: ["Jacklyn Lucas", "Linda Chapman"],
-    isActive: false,
-    balance: 1498,
-    gender: "male",
-  },
-  {
-    name: "Sheree Anthony",
-    email: "shereeanthony@kog.com",
-    eyeColor: "brown",
-    friends: ["Goldie Gentry", "Briana Decker"],
-    isActive: true,
-    balance: 2764,
-    gender: "female",
+    url: "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
   },
 ];
 
-//2) за допомогою методу reduce розрахувати загальний баланс усіх юзерів
+const el = images
+  .map(({ url, alt }) => {
+    return `<li > <img src="${url}" alt="${alt}" width="420"/> </li>`;
+  })
+  .join(" ");
 
-console.log(
-  users.sort((a, b) => a.balance - b.balance).map((user) => user.name)
-);
+imgs.insertAdjacentHTML("beforeend", el);
 
-console.log(
-  users.reduce((start, { balance }) => {
-    return start + balance;
-  }, 0)
-);
-
-const highSalaryFilter = workers
-  .filter(({ salary }) => salary >= MIN_SALARY)
-  .sort((a, b) => a.salary - b.salary);
-
-console.log("highSalaryFilter :>> ", highSalaryFilter);
-const findTopWorker = workers.find(({ name }) => name === TOP_WORKER);
-
-console.log("findTopWorker :>> ", findTopWorker);
+imgs.style.display = "flex";
+imgs.style.justifyContent = "space-between";
+imgs.style.listStyle = "none";
