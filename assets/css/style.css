@@ -1,13 +1,11 @@
-body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 32px;
-}
+* {
+    box-sizing: border-box;
+  }
+  
+.item {
+    color: blue;
+  }
+  
+  .item2 {
+    color: darkgreen;
+  }
